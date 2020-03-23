@@ -1,5 +1,5 @@
 # protractor-test
-Eine Testsuite zur Demonstration von Selenium Protractor mit Jasmine. Sucht eine Standort und zeigt ihn in Google Maps an.
+Eine Testsuite zur Demonstration einer Browserasutomation mit den Frameworks Selenium Protractor mit Jasmine. Sucht eine Standort und zeigt ihn in Google Maps an.
 
 ### Installation ###
 
