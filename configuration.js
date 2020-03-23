@@ -8,7 +8,7 @@ exports.config = {
    },
    seleniumAddress: 'http://localhost:4444/wd/hub',
    directConnect: true,
-   specs: ['spec.Terminheld.alpha.js'],
+   specs: ['spec.google.buchner.js'],
    onPrepare: () => {
       browser.driver.manage().window().maximize();
       jasmine.getEnv().addReporter(
