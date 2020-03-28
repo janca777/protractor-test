@@ -2,24 +2,18 @@ var Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter");
 
 exports.config = {
 
-   /*
-      capabilities: {
+   capabilities: {
          browserName: 'chrome',
-         //browserName: 'firefox',
-         // marionette: true
+         //browserName: 'firefox',//<-- supports one browser at a time only
+         // marionette: true //<-- uncomment this line when running tests on firefox
       },
+      directConnect: true,   
       seleniumAddress: 'http://localhost:4444/wd/hub',
-      directConnect: true,
-    */
-     
-   specs: ['spec.google.buchner.js'],
-   allScriptsTimeout: 50000,
-   getPageTimeout: 50000,
-   framework: 'jasmine2',
-
-
+      specs: ['spec.google.buchner.js'],//<--this points to the file(s) that contain(s) the test(s)
+      framework: 'jasmine2',
+   
    onPrepare: () => {
-      //browser.driver.manage().window().maximize();
+      browser.driver.manage().window().maximize();//<-- run browser in maximised window
       jasmine.getEnv().addReporter(
          new Jasmine2HtmlReporter({
             savePath: 'target/screenshots'
@@ -27,8 +21,7 @@ exports.config = {
       );//addReporter
    },//onPrepare
    jasmineNodeOpts: {
-      showColors: true, // Use colors in the command line report.
-      defaultTimeoutInterval: 50000
+      showColors: true, /<-- use colors in the command line report.
    }
-
+   
 };
