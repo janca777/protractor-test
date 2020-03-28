@@ -7,3 +7,5 @@ Projekt-Ordner öffnen und dann folgende Befehle im Terminal eingeben:
 1. npm install
 2. npm run start
 3. npm run protractor
+
+_Die Tests werden nur auf einem Browser auf einmal ausgeführt, entweder Chrome **oder** Firefox._
